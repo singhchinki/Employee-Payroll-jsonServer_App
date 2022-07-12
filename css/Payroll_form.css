@@ -34,3 +34,56 @@ body {
     color: darkslateblue;
 }
 * { box-sizing: border-box;}
+/*UC 2 */
+
+.form-content {
+    min-height: calc(100%-80px);
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
+}
+.form{
+    width: 65%;
+    padding: 44px 60px;
+    background: white 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px grey;
+    border-radius: 8px;
+    opacity: 1;
+}
+.form-head {
+    font: normal normal bold 24px/37px Roboto;
+    letter-spacing: 0px;
+    color:grey;
+    text-transform: capitalize;
+    opacity: 1;
+    padding-bottom: 20px;
+}
+.row-content {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1opx;
+    align-items: center;
+    border: 0px solid green;
+}
+.label {
+    min-width: 140px;
+}
+label {
+    padding: 12px 12px 12px 0 ;
+    display: inline-block;
+}
+.text {
+    font-size: 16px;
+    color: brown;
+    opacity: 1;
+    font-family: Roboto;
+}
+.input {
+    width: 100%;
+    padding: 12px;
+    border:1px solid grey;
+    border-radius: 4px;
+    resize: vertical;
+}
