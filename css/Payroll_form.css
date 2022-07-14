@@ -66,6 +66,7 @@ body {
     margin-bottom: 1opx;
     align-items: center;
     border: 0px solid green;
+    padding: 5px;
 }
 .label {
     min-width: 140px;
@@ -82,7 +83,7 @@ label {
 }
 .input {
     width: 100%;
-    padding: 12px;
+    padding: 20px;
     border:1px solid grey;
     border-radius: 4px;
     resize: vertical;
@@ -143,6 +144,7 @@ select {
     text-decoration: none;
     text-align: center;
 }
+
 @media only screen and (max-width:960px) {
     .cancelButton{
         margin-left: 0px;
