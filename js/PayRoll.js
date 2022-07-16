@@ -1,4 +1,4 @@
-class Payroll {
+class PayRoll {
     //getter and setter method
 
     get id(){
