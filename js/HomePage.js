@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     employeePayrollList = getEmployeePayrollDataFromStorage();
     document.querySelector(".emp-count").textContent = employeePayrollList.length;
     createInnerHtml();
+    localStorage.removeItem('editEmp');
 });
 const getEmployeePayrollDataFromStorage = () =>{
     return localStorage.getItem('EmployeePayrollList') ?
@@ -14,7 +15,7 @@ const createInnerHtml = () => {
                         "<th>Salary</th><th>Start Date</th><th>Actions</th>";
     
     let innerHtml = `${headerHtml}`;
-    //let empPayrollList = createEmployeePayrollJSON();------ 
+    //let empPayrollList = createEmployeePayrollJSON();-------------uc15-------
     for (const employeePayroll of employeePayrollList) {
         innerHtml = `${innerHtml}  
         <tr>
@@ -25,7 +26,7 @@ const createInnerHtml = () => {
             <td>${employeePayroll._gender}</td>
             <td>${getDeptHtml(employeePayroll._department)}</td>
             <td>${employeePayroll._salary}</td>
-            <td>${employeePayroll._startDate}</td>
+            <td>${stringifyDate(employeePayroll._startDate)}</td>
             <td>
                 <img id="${employeePayroll._id}" onclick="remove(this)" alt="delete" 
                     src="../assets/delete.jpeg">
@@ -47,26 +48,26 @@ const createEmployeePayrollJSON = () => {
                 'Analyst',
                 'Engineer'
             ],
-            _salary: '350000',
-            _startDate: '18 april 2022',
+            _salary: '650000',
+            _startDate: '8 Nov 2019',
             _note: '',
             _id: new Date().getTime(),
             _profilePic: '../assets/female.png'
         },
         {
-            _name: 'Ankush',
+            _name: 'Arjun',
             _gender: 'Male',
             _department: [
-                'HR'
+                'Army'
             ],
             _salary: '800000',
-            _startDate: '15 Jun 2019',
+            _startDate: '15 Jan 2015',
             _note: '',
             _id: new Date().getTime() + 1,
             _profilePic: '../assets/male.png'
         },
         {
-            _name: 'ruhi',
+            _name: 'Dimple',
             _gender: 'Female',
             _department: [
                 'Teacher',
@@ -79,7 +80,7 @@ const createEmployeePayrollJSON = () => {
             _profilePic: '../assets/femal2.jpeg'
         },
         {
-            _name: 'kapil',
+            _name: 'Mallikharjun',
             _gender: 'Male',
             _department: [
                 'Sales',
